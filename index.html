@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehreen Tabassum — AI & ML Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0a0a0a;
+      --text-main: #ffffff;
+      --text-muted: #a3a3a3;
+      --accent: #DAA520; /* Standardized exact Gold color for all boxes/accents */
+      --border: #222222;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    /* Custom thin scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* Navigation Link Hover */
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    /* Box Layouts - Now explicitly using the gold accent color */
+    .research-box {
+      border: 1px solid var(--accent);
+      padding: 2rem;
+      position: relative;
+      background: var(--bg-alt);
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .research-box:hover {
+      box-shadow: 0 4px 20px rgba(218, 165, 32, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .box-label {
+      position: absolute;
+      top: -0.65rem;
+      left: 1.5rem;
+      background: var(--bg);
+      padding: 0 0.5rem;
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .section-line {
+      width: 2rem;
+      height: 1px;
+      background-color: var(--accent); /* Changed to gold to match */
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid var(--accent); /* Buttons get the gold border too */
+      color: var(--accent);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background: rgba(218, 165, 32, 0.1);
+      transform: translateY(-2px);
+    }
+
+    h1, h2, h3, h4 { letter-spacing: -0.02em; }
+
+    /* --- Core Scroll Animation Engine --- */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Delay variations for grids */
+    .delay-75 { transition-delay: 75ms; }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-150 { transition-delay: 150ms; }
+    .delay-200 { transition-delay: 200ms; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#home" class="font-semibold text-sm tracking-wide text-white">MT.</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills & Awards</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="min-h-screen flex items-center pt-24 pb-16 px-6">
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+    
+    <div class="scroll-reveal visible"> 
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[1.05] text-[var(--accent)] mb-8">
+        Mehreen<br/>Tabassum
+      </h1>
+      
+      <div class="w-16 h-px bg-gradient-to-r from-[var(--accent)] to-transparent mb-8"></div>
+      
+      <p class="text-[var(--text-muted)] text-base md:text-lg max-w-lg leading-relaxed font-light mb-10">
+        Associate Lecturer and AI Researcher specializing in Explainable AI (XAI), Deep Learning, and Generative AI Architectures. Bridging core computational frameworks with visually interpretable neural models.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="btn-outline">
+          Get in Touch
+        </a>
+        <a href="https://github.com/MehreenTabassum" target="_blank" rel="noopener" class="btn-outline">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mehreen-t-366800105/" target="_blank" rel="noopener" class="btn-outline">
+          LinkedIn
+        </a>
+        <a href="https://www.researchgate.net/profile/Mehreen-Tabassum?ev=hdr_xprf" target="_blank" rel="noopener" class="btn-outline">
+          ResearchGate
+        </a>
+      </div>
+    </div>
+
+    <div class="hidden lg:block relative h-[550px] w-full bg-[#0a0a0a] border border-[var(--accent)] overflow-hidden scroll-reveal">
+      <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#DAA520_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+        <div class="text-[var(--accent)] font-mono text-xs mb-2 tracking-widest uppercase">[ Core Core-Thesis Focus ]</div>
+        <div class="text-white text-lg font-medium max-w-xs font-serif italic">"Visual Interpretation of Brain Tumor Classification Using Knowledge Distillation"</div>
+        <div class="text-[var(--text-muted)] text-xs mt-4 font-mono">Ensemble CNN-ViT Architecture with Interpretability &bull; 95% Accuracy</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="py-24 px-6 border-t border-[var(--border)]">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="section-header scroll-reveal">
+      <div class="section-line"></div>
+      <h2 class="text-3xl font-bold text-white">Core Research Profile</h2>
+    </div>
+
+    <div class="research-box mt-10 scroll-reveal">
+      <span class="box-label">Master's Research</span>
+      <h3 class="text-white text-lg font-medium mb-3">Generative XAI & Medical Computer Vision</h3>
+      <p class="text-[var(--text-muted)] leading-relaxed font-light text-sm md:text-base">
+        Addressed the complex black-box challenge inherent to deep neural networks by developing highly interpretable visual systems for healthcare. Engineered a custom knowledge-distillation framework pairing an ensemble CNN-Vision Transformer (ViT) architecture as the teacher model with a Grad-CAM student layer, obtaining a verified classification accuracy of 95% on dual brain tumor MRI datasets.
+      </p>
+    </div>
+
+    <div class="research-box scroll-reveal">
+      <span class="box-label">Natural Language Processing</span>
+      <h3 class="text-white text-lg font-medium mb-3">Large Language Model Orchestration</h3>
+      <p class="text-[var(--text-muted)] leading-relaxed font-light text-sm md:text-base">
+        Deeply investigated context centric transformer architectures - including BERT, BART, GPT, and Mistral frameworks. Successfully configured state-of-the-art medical language variants (RoBERTa, CLIP) onto downstream operations like generative medical reporting, syntactic semantic similarity, and contextual clinical image captioning.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="py-24 px-6 border-t border-[var(--border)]">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16">
+    
+    <div>
+      <div class="section-header mb-10 scroll-reveal">
+        <div class="section-line"></div>
+        <h2 class="text-2xl font-bold text-white">Work Experience</h2>
+      </div>
+
+      <div class="space-y-12">
+        <div class="relative pl-6 border-l border-[var(--accent)] scroll-reveal">
+          <div class="absolute w-2 h-2 bg-[var(--accent)] -left-[4.5px] top-1.5"></div>
+          <h3 class="text-lg font-semibold text-white">Associate Lecturer</h3>
+          <p class="text-[var(--accent)] text-xs font-mono uppercase tracking-wider mb-3">Capital University of Science and Technology(CUST), Islamabad &bull; 2025 – Present</p>
+          <ul class="text-[var(--text-muted)] text-sm font-light space-y-2 list-disc pl-4">
+            <li>Designing and delivering technical lectures for undergraduate Computer Science tracks, including Operating Systems and Computer Architecture.</li>
+            <li>Directing final year Projects supervision, academic examinations, and programming assessments.</li>
+            <li>Integrating interactive pedagogical workflows to maximize student learning retention.</li>
+          </ul>
+        </div>
+
+        <div class="relative pl-6 border-l border-[var(--accent)] scroll-reveal">
+          <div class="absolute w-2 h-2 bg-[var(--accent)] -left-[4.5px] top-1.5"></div>
+          <h3 class="text-lg font-semibold text-white">Research Assistant</h3>
+          <p class="text-[var(--text-muted)] text-xs font-mono uppercase tracking-wider mb-3 opacity-70">Smart Agritech Lab, SINES, NUST &bull; 2023 – 2024</p>
+          <ul class="text-[var(--text-muted)] text-sm font-light space-y-2 list-disc pl-4">
+            <li>Evaluated algorithmic parameters on Transformer-backed deep structures and Generative-XAI frameworks.</li>
+            <li>Coordinated deep learning execution constraints over Supercomputers and distributed high-performance GPU clusters.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-header mb-10 scroll-reveal">
+        <div class="section-line"></div>
+        <h2 class="text-2xl font-bold text-white">Education</h2>
+      </div>
+
+      <div class="space-y-12">
+        <div class="relative pl-6 border-l border-[var(--accent)] scroll-reveal">
+          <div class="absolute w-2 h-2 bg-[var(--accent)] -left-[4.5px] top-1.5"></div>
+          <h3 class="text-lg font-semibold text-white">MSEE — Artificial Intelligence & Autonomous Systems</h3>
+          <p class="text-[var(--accent)] text-sm mb-2">National University of Sciences and Technology (NUST), Islamabad</p>
+          <p class="text-xs font-mono text-[var(--text-muted)] mb-3">CGPA: 3.43 / 4.00 &bull; 2021 – 2024</p>
+          <p class="text-[var(--text-muted)] text-sm font-light leading-relaxed">
+            Focused on advanced deep learning architectures, post-hoc explanations, and vision transformer(ViT). Supported by the prestigious merit-based HEC Indigenous Scholarship.
+          </p>
+        </div>
+
+        <div class="relative pl-6 border-l border-[var(--accent)] scroll-reveal">
+          <div class="absolute w-2 h-2 bg-[var(--accent)] -left-[4.5px] top-1.5"></div>
+          <h3 class="text-lg font-semibold text-white">BS — Electrical Engineering</h3>
+          <p class="text-[var(--text-muted)] text-sm mb-2 opacity-80">COMSATS University Islamabad (CUI), Islamabad</p>
+          <p class="text-xs font-mono text-[var(--text-muted)] mb-3">CGPA: 3.30 / 4.00 &bull; 2014 – 2018</p>
+          <p class="text-[var(--text-muted)] text-sm font-light leading-relaxed">
+            Specialized in embedded hardware integrations and automated control feedback networks. Funded by the full four-year Government merit based ICT scholarship.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects" class="py-24 px-6 border-t border-[var(--border)]">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="section-header scroll-reveal">
+      <div class="section-line"></div>
+      <h2 class="text-3xl font-bold text-white">Projects</h2>
+    </div>
+
+    <div class="space-y-6 mt-10">
+      
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
+          Project: NeuroPulse-AI Post-Operative Brain Tumor Recovery CHATBOT
+        </h3>
+        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base font-light leading-relaxed">
+          <li>
+            NeuroRecovery AI is a Level 3 Agentic Medical AI system that performs post-operative recovery analysis for Glioblastoma Multiforme (GBM) patients using the UCSD-PTGBM-BraTS-2024 dataset. Extracts deep multimodal features using a custom 3D CNN-ViT hybrid model (17M parameters). Retrieves evidence from a RAG vector store of neuro-oncology literature via Chroma + Ollama embeddings. Synthesizes a structured 7-section clinical report via Groq API (LLaMA 3.1).
+          </li>
+        </ul>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-75 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
+          Project: Weakly-Supervised Anomaly Detection
+        </h3>
+        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base font-light leading-relaxed">
+          <li>
+            Designed and implemented an automated predictive pipeline optimized to isolate irregular behavior patterns (theft, vehicle impacts, fire outcasts) within real-time streaming security video matrices.
+          </li>
+        </ul>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-100 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
+          Project: Single-Image 3D Scene Reconstruction
+        </h3>
+        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base font-light leading-relaxed">
+          <li>
+            Engineered an end-to-end computer vision algorithm capable of restructuring dimensional spatial geometry profiles from isolated inputs, tuned specifically for domestic geographic layouts.
+          </li>
+        </ul>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-150 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
+          Project: Pix2Pix CGAN Architectural Demystification
+        </h3>
+        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base font-light leading-relaxed">
+          <li>
+            Developed a clean-room training execution script utilizing Conditional Adversarial Networks to process cross-domain pixel translation challenges and structural image re-mapping.
+          </li>
+        </ul>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-200 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
+          Project: Speech-Controlled Firefighting Drone
+        </h3>
+        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base font-light leading-relaxed">
+          <li>
+            Assembled an automated quadcopter drone leveraging an Arduino platform and Android Speech APIs. Integrated thermal sensor streams and automated liquid pump FET switches to intercept active structural threats.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-24 px-6 border-t border-[var(--border)]">
+  <div class="max-w-4xl mx-auto">
+    
+    <div class="section-header scroll-reveal">
+      <div class="section-line"></div>
+      <h2 class="text-3xl font-bold text-white">Technical Arsenal & Awards</h2>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[var(--accent)] font-semibold text-sm tracking-wide uppercase mb-3">&bull; AI / Machine Learning</h3>
+        <p class="text-[var(--text-muted)] text-sm font-light leading-relaxed">
+          TensorFlow, PyTorch, Scikit-learn, CNN-Transformer configurations, Knowledge Distillation workflows, Model Compression, Latency Tuning.
+        </p>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-100 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[var(--accent)] font-semibold text-sm tracking-wide uppercase mb-3">&bull; NLP & Generation</h3>
+        <p class="text-[var(--text-muted)] text-sm font-light leading-relaxed">
+          Large Language Models, Transformer Engineering, Prompt Design, LangChain, LangSmith, Gradio interfaces, Streamlit, NLTK parser structures.
+        </p>
+      </div>
+
+      <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal delay-200 transition-transform hover:-translate-y-1 duration-300">
+        <h3 class="text-[var(--accent)] font-semibold text-sm tracking-wide uppercase mb-3">&bull; Environment & DevOps</h3>
+        <p class="text-[var(--text-muted)] text-sm font-light leading-relaxed">
+          Python, Linux Systems (Ubuntu/CentOS), Version Control (Git), Docker Containerization, CI/CD pipelines, Supercomputer/HPC computation clustering.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-16 border border-[var(--accent)] p-6 bg-[var(--bg-alt)] scroll-reveal">
+      <h3 class="text-[var(--accent)] text-sm font-semibold uppercase tracking-wider mb-4">Honours & Merit Recognitions</h3>
+      <div class="space-y-3 text-sm font-light">
+        <p class="text-[var(--text-muted)]"><strong class="text-white font-medium">HEC Indigenous Merit Scholarship (MS)</strong> — Fully funded master's program tenure covering all programmatic allocations.</p>
+        <p class="text-[var(--text-muted)]"><strong class="text-white font-medium">National ICT Scholarship Award (BS)</strong> — Full four-year state scholarship covering comprehensive tuition, books, and transit stipends.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="py-24 px-6 border-t border-[var(--border)] bg-[var(--bg-alt)]">
+  <div class="max-w-4xl mx-auto text-center scroll-reveal">
+    <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+    <p class="text-[var(--text-muted)] font-light max-w-lg mx-auto mb-10">
+      Open for active collaborations across advanced machine learning pipelines, eXplainable AI research, and interdisciplinary projects at the intersection of healthcare and computer vision. Feel free to reach out for research inquiries, speaking engagements, or potential partnerships. 
+    </p>
+    
+    <div class="space-y-3 mb-10">
+      <a href="mailto:mehreentabassum761@gmail.com" class="inline-flex items-center gap-3 text-[var(--accent)] hover:text-white transition-colors border-b border-[var(--accent)] pb-1 text-lg">
+        mehreentabassum761@gmail.com
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    
+    <div class="text-xs tracking-widest text-[var(--text-muted)] uppercase">
+      &copy; 2026 Mehreen Tabassum &bull; Islamabad, Pakistan
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15 
+    };
+
+    const scrollRevealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".scroll-reveal").forEach(element => {
+      scrollRevealObserver.observe(element);
+    });
+  });
+</script>
+
+</body>
+</html>
