@@ -120,6 +120,76 @@
     .delay-100 { transition-delay: 100ms; }
     .delay-150 { transition-delay: 150ms; }
     .delay-200 { transition-delay: 200ms; }
+
+    /* --- Featured FYP Project --- */
+    .featured-project {
+      border: 1px solid var(--accent);
+      background: var(--bg-alt);
+      overflow: hidden;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .project-gallery figure {
+      margin: 0;
+      background: #0a0a0a;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: auto;
+      max-height: 650px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      background: #111111;
+      transition: transform 0.5s ease;
+    }
+.project-gallery figure:hover img {
+      transform: scale(1.02);
+    }
+
+    .project-gallery figcaption {
+      padding: 0.75rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+    }
+
+    .project-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-family: monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .project-pill {
+      display: inline-block;
+      border: 1px solid #333;
+      padding: 0.35rem 0.65rem;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      margin: 0.2rem 0.25rem 0.2rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+      .project-gallery img {
+        max-height: none;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -281,6 +351,102 @@
 
     <div class="space-y-6 mt-10">
       
+
+      <!-- Featured FYP Project -->
+      <article class="featured-project scroll-reveal">
+        <div class="p-6 md:p-8">
+          <div class="project-meta mb-3">Featured Final Year Project &bull; CUST</div>
+
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+            <div>
+              <h3 class="text-[#FACC15] font-bold text-xl md:text-2xl tracking-wide mb-2">
+                Posture Guard — AI-Driven IoT Posture Detection & Correction System
+              </h3>
+              <p class="text-[var(--text-muted)] text-sm">
+                A wearable, AI-enabled system for real-time posture monitoring, detection,
+                feedback, and improvement.
+              </p>
+            </div>
+            <div class="border border-[var(--accent)] px-3 py-2 text-[var(--accent)] text-xs font-semibold uppercase tracking-wider">
+              1st Prize &bull; Industrial Open House 2026
+            </div>
+          </div>
+
+          <div class="project-gallery mb-8">
+            <figure>
+              <img src="images/fyp2.jpeg"
+                   alt="Posture Guard system architecture showing wearable belt, MPU6050, ESP32, machine learning model, Flutter application, vibration motor, database, and AI chatbot"
+                   loading="lazy">
+              <figcaption>System architecture — from wearable sensing and AI classification to mobile feedback, database storage, and chatbot guidance.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/fyp3.jpeg"
+                   alt="Posture Guard final year project hardware demonstration and project poster"
+                   loading="lazy">
+              <figcaption>Project showcase — wearable posture-correction system, hardware prototype, and FYP poster.</figcaption>
+            </figure>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-white font-semibold mb-3">Project Overview</h4>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed font-light mb-4">
+                Posture Guard combines wearable sensing, embedded processing, machine learning,
+                mobile application feedback, and intelligent guidance to help users monitor and
+                improve their posture. The system continuously collects body-motion data through
+                an MPU6050 sensor, processes the readings using an ESP32, and classifies posture
+                using a machine-learning model.
+              </p>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed font-light">
+                The Flutter application displays posture status and history, while an alert
+                mechanism provides immediate feedback when incorrect posture is detected.
+                Sensor readings are stored in a database, and an AI chatbot provides corrective
+                guidance and posture-improvement tips.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="text-white font-semibold mb-3">My Role — FYP Supervisor</h4>
+              <p class="text-[var(--text-muted)] text-sm leading-relaxed font-light mb-4">
+                Supervised the student team throughout the development of the AI-driven IoT
+                posture detection and correction system, providing technical direction on the
+                system architecture, AI component, integration, testing, and project refinement.
+              </p>
+
+              <h4 class="text-white font-semibold mb-3">Key Components</h4>
+              <div>
+                <span class="project-pill">MPU6050</span>
+                <span class="project-pill">ESP32</span>
+                <span class="project-pill">Machine Learning</span>
+                <span class="project-pill">Flutter</span>
+                <span class="project-pill">IoT</span>
+                <span class="project-pill">Posture Classification</span>
+                <span class="project-pill">Real-Time Feedback</span>
+                <span class="project-pill">AI Chatbot</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#222]">
+            <h4 class="text-white font-semibold mb-3">System Flow</h4>
+            <div class="flex flex-wrap gap-2 text-xs text-[var(--text-muted)]">
+              <span class="project-pill">Wearable Belt</span>
+              <span class="text-[var(--accent)] self-center">→</span>
+              <span class="project-pill">MPU6050 Sensor</span>
+              <span class="text-[var(--accent)] self-center">→</span>
+              <span class="project-pill">ESP32 Processing</span>
+              <span class="text-[var(--accent)] self-center">→</span>
+              <span class="project-pill">ML Classification</span>
+              <span class="text-[var(--accent)] self-center">→</span>
+              <span class="project-pill">Flutter App</span>
+              <span class="text-[var(--accent)] self-center">→</span>
+              <span class="project-pill">Alert & Guidance</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <div class="border border-[var(--accent)] bg-[var(--bg-alt)] p-6 scroll-reveal transition-transform hover:-translate-y-1 duration-300">
         <h3 class="text-[#FACC15] font-bold text-lg tracking-wide mb-3">
           Project: NeuroPulse-AI Post-Operative Brain Tumor Recovery CHATBOT
